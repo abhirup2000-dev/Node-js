@@ -1,0 +1,20 @@
+{
+  "name": "nodebasics",
+  "version": "1.0.0",
+  "description": "nodejs learning",
+  "license": "ISC",
+  "author": "abhirup",
+  "type": "commonjs",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon app.js",
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.11"
+  }
+}
