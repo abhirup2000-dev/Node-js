@@ -1,24 +1,18 @@
 const express=require('express')
-
 const app=express()
+const ejs=require('ejs')
 
-app.get('/',(req,res)=>{
-  res.send('Home Page')
-})
+app.set('view engine', 'ejs')
+app.set('views', 'views')
 
-app.get('/about',(req,res)=>{
-  res.send('About page')
-})
+const homerouter=require('./app/routes/homeroute')
+app.use(homerouter)
 
-app.get('/contact',(req,res)=>{
-  res.send('Contact page')
-})
 
-app.get('/details',(req,res)=>{
-  res.send('Welcome to details page')
-})
-const port=3004
+
+
+const port=3006
 
 app.listen(port,()=>{
-  console.log(`Server is running on port ${port}`)
+  console.log(`Your project successfully run on this port ${port}`)
 })
